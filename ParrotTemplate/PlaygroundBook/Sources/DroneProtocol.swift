@@ -32,7 +32,7 @@
 import Foundation
 
 /// Delegate. All function are called in the DroneProtocol dispatch queue
-protocol DroneProtocolDelegate: class {
+protocol DroneProtocolDelegate: AnyObject {
     func protocolConnecting(name: String, uuid: UUID, model: Model, subModel: SubModel)
     func protocolDidConnect()
     func protocolDidDisconnect()

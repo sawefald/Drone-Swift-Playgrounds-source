@@ -33,7 +33,7 @@ import UIKit
 import CoreMotion
 import PlaygroundSupport
 
-protocol MotionTrackerDelegate: class {
+protocol MotionTrackerDelegate: AnyObject {
     func motionUpdate(lateralAngle: Int, longitudinalAngle: Int, lastEvent: MotionEvent)
     func motionEvent(_ event: MotionEvent)
 }

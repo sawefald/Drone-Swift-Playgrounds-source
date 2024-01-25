@@ -36,7 +36,7 @@ import PlaygroundBluetooth
 ///
 /// Delegate notified of ble connection
 ///
-protocol DroneBleDelegate: class {
+protocol DroneBleDelegate: AnyObject {
     func droneBleDidConnect()
     func droneBleDidDisconnect()
 }
@@ -75,7 +75,7 @@ class DroneBle: NSObject {
         }
 
         func write(data: Data) {
-            characteristic.service.peripheral.writeValue(data, for: characteristic, type: .withoutResponse)
+            characteristic.service?.peripheral?.writeValue(data, for: characteristic, type: .withoutResponse)
         }
     }
 
@@ -88,7 +88,7 @@ class DroneBle: NSObject {
 
         init (characteristic: CBCharacteristic) {
             self.characteristic = characteristic
-            characteristic.service.peripheral.setNotifyValue(true, for: self.characteristic)
+            characteristic.service?.peripheral?.setNotifyValue(true, for: self.characteristic)
         }
 
         func receive(data: Data) {
@@ -108,7 +108,7 @@ class DroneBle: NSObject {
     }
 
     /// Parrot manufacturer data
-    fileprivate static let parrotBleManufacturerData = Data(bytes: [0x43, 0x00, 0xCF, 0x19])
+    fileprivate static let parrotBleManufacturerData = Data(_: [0x43, 0x00, 0xCF, 0x19])
     /// playground bluetooth central manager
     var btManager: PlaygroundBluetoothCentralManager!
     /// delegate
@@ -289,7 +289,7 @@ extension CBUUID {
 /// Extension of CBService ot find a characteristic by UUID
 extension CBService {
     func characteristic(withUid uid: CBUUID) -> CBCharacteristic? {
-        if let idx = characteristics?.index(where: {$0.uuid == uid}) {
+        if let idx = characteristics?.firstIndex(where: {$0.uuid == uid}) {
             return characteristics?[idx]
         }
         return nil

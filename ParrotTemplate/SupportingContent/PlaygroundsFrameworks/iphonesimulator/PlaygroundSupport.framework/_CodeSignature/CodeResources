@@ -10,23 +10,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		13PkfDo7IYfjpDFzTE/JpOjwHsc=
+		gJI5OuSkc76F4zjw48k8EqMhSUU=
+		</data>
+		<key>Modules/PlaygroundSupport.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		wuC3uL0bw0h9dWAlsrJUDyFouF4=
+		</data>
+		<key>Modules/PlaygroundSupport.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		TxWsE/XDn1IGhDpJIEX5lg1UuFE=
+		</data>
+		<key>Modules/PlaygroundSupport.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		Jw18CGwWwyiKSlo5N7YCB+P1IEA=
+		</data>
+		<key>Modules/PlaygroundSupport.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		TxWsE/XDn1IGhDpJIEX5lg1UuFE=
+		</data>
+		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		wuC3uL0bw0h9dWAlsrJUDyFouF4=
+		</data>
+		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		UalMP+TxC7Gy4F4AWAqkJAzPbXI=
 		</data>
 		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		mrhb78WKo3RVkqlnay1I6tWo1hc=
+		kad8+BqhkuQZgkqTO73x/FjPJg8=
 		</data>
-		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		AX8qeTe6hnEh0qm980UB3aB/JZw=
-		</data>
-		<key>Modules/PlaygroundSupport.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		mrhb78WKo3RVkqlnay1I6tWo1hc=
-		</data>
-		<key>Modules/PlaygroundSupport.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		AX8qeTe6hnEh0qm980UB3aB/JZw=
+		UalMP+TxC7Gy4F4AWAqkJAzPbXI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -34,7 +50,7 @@
 		</data>
 		<key>version.plist</key>
 		<data>
-		3R6R1RYswZkoE01LgLfzMd2m4Nk=
+		FW+V1j2wTg7vODh9I7L5nsGv/qM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -50,48 +66,92 @@
 			BI1I38xyR02dzowCn/A+j24a00lB3p03Vw7tZc5Qylo=
 			</data>
 		</dict>
+		<key>Modules/PlaygroundSupport.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wuC3uL0bw0h9dWAlsrJUDyFouF4=
+			</data>
+			<key>hash2</key>
+			<data>
+			O/u7IhGVNDkC4S9ZG8PWQG32NyrgNXHUN4CyFBPYszc=
+			</data>
+		</dict>
+		<key>Modules/PlaygroundSupport.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TxWsE/XDn1IGhDpJIEX5lg1UuFE=
+			</data>
+			<key>hash2</key>
+			<data>
+			rdT1YCSBXHHdDyBw+A0JXd1u8T0lJPEArsRRg1Ljws0=
+			</data>
+		</dict>
+		<key>Modules/PlaygroundSupport.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Jw18CGwWwyiKSlo5N7YCB+P1IEA=
+			</data>
+			<key>hash2</key>
+			<data>
+			TAZOYPMVsmciWsdXCHgeEgk5V2gqJJie58gqBr6ljOg=
+			</data>
+		</dict>
+		<key>Modules/PlaygroundSupport.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TxWsE/XDn1IGhDpJIEX5lg1UuFE=
+			</data>
+			<key>hash2</key>
+			<data>
+			rdT1YCSBXHHdDyBw+A0JXd1u8T0lJPEArsRRg1Ljws0=
+			</data>
+		</dict>
+		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wuC3uL0bw0h9dWAlsrJUDyFouF4=
+			</data>
+			<key>hash2</key>
+			<data>
+			O/u7IhGVNDkC4S9ZG8PWQG32NyrgNXHUN4CyFBPYszc=
+			</data>
+		</dict>
+		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UalMP+TxC7Gy4F4AWAqkJAzPbXI=
+			</data>
+			<key>hash2</key>
+			<data>
+			w63Gy8lMVvjCO8t8m7YABKeXUDFdRJ38LOwxKM2OTYU=
+			</data>
+		</dict>
 		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mrhb78WKo3RVkqlnay1I6tWo1hc=
+			kad8+BqhkuQZgkqTO73x/FjPJg8=
 			</data>
 			<key>hash2</key>
 			<data>
-			aZ86SIeqKi4F+AqzpN/PyOBQBY8owRUwUrTsAXk2YsM=
+			KkAcasFqRq8bRJK4qgONjBJcozoZ1LmEVvCXdshs3CU=
 			</data>
 		</dict>
-		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/PlaygroundSupport.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AX8qeTe6hnEh0qm980UB3aB/JZw=
+			UalMP+TxC7Gy4F4AWAqkJAzPbXI=
 			</data>
 			<key>hash2</key>
 			<data>
-			RuUxuK5Y3jP4fVzcHpF6GwxdaKdOJFhVgsFN3BTVE4Y=
-			</data>
-		</dict>
-		<key>Modules/PlaygroundSupport.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mrhb78WKo3RVkqlnay1I6tWo1hc=
-			</data>
-			<key>hash2</key>
-			<data>
-			aZ86SIeqKi4F+AqzpN/PyOBQBY8owRUwUrTsAXk2YsM=
-			</data>
-		</dict>
-		<key>Modules/PlaygroundSupport.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AX8qeTe6hnEh0qm980UB3aB/JZw=
-			</data>
-			<key>hash2</key>
-			<data>
-			RuUxuK5Y3jP4fVzcHpF6GwxdaKdOJFhVgsFN3BTVE4Y=
+			w63Gy8lMVvjCO8t8m7YABKeXUDFdRJ38LOwxKM2OTYU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -109,11 +169,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3R6R1RYswZkoE01LgLfzMd2m4Nk=
+			FW+V1j2wTg7vODh9I7L5nsGv/qM=
 			</data>
 			<key>hash2</key>
 			<data>
-			OfLVWvHpjPmVNmO9cVklQbZ7hKGyWCnPGhkE4vEQhas=
+			3esoc/JtNMeGq64yVYsXwxtJWtX90BObPG3PMFYU1uI=
 			</data>
 		</dict>
 	</dict>
