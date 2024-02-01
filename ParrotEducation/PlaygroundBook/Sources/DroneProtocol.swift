@@ -32,7 +32,7 @@
 import Foundation
 
 /// Delegate. All function are called in the DroneProtocol dispatch queue
-protocol DroneProtocolDelegate: class {
+protocol DroneProtocolDelegate: AnyObject {
     func protocolConnecting(name: String, uuid: UUID, model: Model, subModel: SubModel)
     func protocolDidConnect()
     func protocolDidDisconnect()
@@ -665,45 +665,43 @@ extension Data {
     }
 
     mutating func append(data: UInt8) {
-        self.append(Data(bytes: UnsafePointer<UInt8>([data]), count: MemoryLayout<UInt8>.size))
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
+        }
     }
 
     mutating func append(data: Int8) {
-        UnsafePointer([data]).withMemoryRebound(to: UInt8.self, capacity: MemoryLayout<Int8>.size) {
-            self.append($0, count: MemoryLayout<Int8>.size)
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
         }
     }
 
     mutating func append(data: Int16) {
-        UnsafePointer([data]).withMemoryRebound(to: UInt8.self, capacity: MemoryLayout<Int16>.size) {
-            self.append($0, count: MemoryLayout<Int16>.size)
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
         }
     }
 
     mutating func append(data: UInt32) {
-        UnsafePointer([data]).withMemoryRebound(to: UInt8.self, capacity: MemoryLayout<UInt32>.size) {
-            self.append($0, count: MemoryLayout<UInt32>.size)
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
         }
     }
 
     mutating func append(data: Float) {
-        UnsafePointer([data]).withMemoryRebound(to: UInt8.self, capacity: MemoryLayout<Float>.size) {
-            self.append($0, count: MemoryLayout<Float>.size)
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
         }
     }
 
     func readFloat(at index: Index) -> Float {
-        return self.subdata(
-            in: index..<index+MemoryLayout<Float>.size).withUnsafeBytes { (values: UnsafePointer<Float>) -> Float in
-                return values.pointee
-        }
+        return self.subdata(in: index..<index+MemoryLayout<Float>.size).withUnsafeBytes {$0.load(as: Float.self)}
     }
 
     func readString(at index: Index) -> String {
-        return self.subdata(
-            in: index..<self.count).withUnsafeBytes { (values: UnsafePointer<UInt8>) -> String in
-                return String(cString: values)
-        }
+        let y = self.subdata(in: index..<self.count)
+        guard let str = String(data: y, encoding: .utf8) else { return "" }
+        return str
     }
 }
 

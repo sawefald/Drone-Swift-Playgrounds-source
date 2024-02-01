@@ -36,7 +36,7 @@ import PlaygroundBluetooth
 ///
 /// Delegate notified of ble connection
 ///
-protocol DroneBleDelegate: class {
+protocol DroneBleDelegate: AnyObject {
     func droneBleDidConnect()
     func droneBleDidDisconnect()
 }
@@ -75,7 +75,7 @@ class DroneBle: NSObject {
         }
 
         func write(data: Data) {
-            characteristic.service.peripheral.writeValue(data, for: characteristic, type: .withoutResponse)
+            characteristic.service?.peripheral?.writeValue(data, for: characteristic, type: .withoutResponse)
         }
     }
 
@@ -88,7 +88,7 @@ class DroneBle: NSObject {
 
         init (characteristic: CBCharacteristic) {
             self.characteristic = characteristic
-            characteristic.service.peripheral.setNotifyValue(true, for: self.characteristic)
+            characteristic.service?.peripheral?.setNotifyValue(true, for: self.characteristic)
         }
 
         func receive(data: Data) {

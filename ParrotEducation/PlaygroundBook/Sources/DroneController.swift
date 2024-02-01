@@ -31,7 +31,7 @@
 
 import Foundation
 
-protocol DroneControllerDelegate: class {
+protocol DroneControllerDelegate: AnyObject {
     func opTerminated(error: DroneController.OpError?)
     func droneControllerDidFindDrone(droneModel: DroneModel)
     func droneControllerDidStop()

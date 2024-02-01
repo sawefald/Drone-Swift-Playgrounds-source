@@ -33,12 +33,12 @@ import Foundation
 import PlaygroundSupport
 
 /// Drone related events listener
-protocol DroneViewProxyDroneDelegate: class {
+protocol DroneViewProxyDroneDelegate: AnyObject {
     func droneViewProxyDidReceiveStatusEvent(flyingState: FlyingState, hasCannon: Bool, hasGrabber: Bool)
 }
 
 /// Motion tracker related events listener
-protocol DroneViewProxyMotionTrackerDelegate: class {
+protocol DroneViewProxyMotionTrackerDelegate: AnyObject {
     func droneViewProxyDidReceiveMotionEvent(_ event: MotionEvent)
 }
 

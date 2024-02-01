@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,11 +30,6 @@
 		0294935C2353C9D900989769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0294935B2353C9D900989769 /* Main.storyboard */; };
 		0294935E2353C9FA00989769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0294935D2353C9FA00989769 /* Assets.xcassets */; };
 		029493602353CBD800989769 /* BookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0294935F2353CBD800989769 /* BookIcon.png */; };
-		0294936D2353CC0700989769 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 029493622353CC0600989769 /* Glossary.plist */; };
-		0294936E2353CC0700989769 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029493642353CC0600989769 /* ManifestPlist.strings */; };
-		0294936F2353CC0700989769 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 029493672353CC0700989769 /* Glossary.plist */; };
-		029493702353CC0700989769 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029493692353CC0700989769 /* Localizable.strings */; };
-		029493712353CC0700989769 /* EditableFields.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0294936B2353CC0700989769 /* EditableFields.strings */; };
 		5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E086DCF2051DF0F004D8D25 /* Manifest.plist */; };
 		5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */; };
 		5EA2E3C02056F35A00416A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2E3BF2056F35A00416A35 /* AppDelegate.swift */; };
@@ -141,11 +136,6 @@
 		0294935B2353C9D900989769 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0294935D2353C9FA00989769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0294935F2353CBD800989769 /* BookIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BookIcon.png; sourceTree = "<group>"; };
-		029493632353CC0600989769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = Glossary.plist; sourceTree = "<group>"; };
-		029493652353CC0600989769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ManifestPlist.strings; sourceTree = "<group>"; };
-		029493682353CC0700989769 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = Glossary.plist; sourceTree = "<group>"; };
-		0294936A2353CC0700989769 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Localizable.strings; sourceTree = "<group>"; };
-		0294936C2353CC0700989769 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = EditableFields.strings; sourceTree = "<group>"; };
 		5E086DC02051C5A7004D8D25 /* Parrot Education.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parrot Education.playgroundbook"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
 		5E086DCF2051DF0F004D8D25 /* Manifest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Manifest.plist; sourceTree = "<group>"; };
@@ -186,26 +176,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		029493612353CC0600989769 /* en.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				029493622353CC0600989769 /* Glossary.plist */,
-				029493642353CC0600989769 /* ManifestPlist.strings */,
-			);
-			name = en.lproj;
-			path = "../../../../Drone-Swift-Playgrounds-source-XCode11/ParrotEducation/PlaygroundBook/PrivateResources/en.lproj";
-			sourceTree = "<group>";
-		};
-		029493662353CC0700989769 /* fr.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				029493672353CC0700989769 /* Glossary.plist */,
-				029493692353CC0700989769 /* Localizable.strings */,
-				0294936B2353CC0700989769 /* EditableFields.strings */,
-			);
-			path = fr.lproj;
-			sourceTree = "<group>";
-		};
 		5E086DA4204F706E004D8D25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,8 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				0294935D2353C9FA00989769 /* Assets.xcassets */,
-				029493612353CC0600989769 /* en.lproj */,
-				029493662353CC0700989769 /* fr.lproj */,
 				0294935F2353CBD800989769 /* BookIcon.png */,
 				0294935B2353C9D900989769 /* Main.storyboard */,
 			);
@@ -425,8 +393,9 @@
 		5E2A7ADD204F611300F4E17A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					5E086DBF2051C5A7004D8D25 = {
 						CreatedOnToolsVersion = 9.3;
@@ -470,11 +439,6 @@
 				0294935C2353C9D900989769 /* Main.storyboard in Resources */,
 				0294935E2353C9FA00989769 /* Assets.xcassets in Resources */,
 				029493602353CBD800989769 /* BookIcon.png in Resources */,
-				0294936E2353CC0700989769 /* ManifestPlist.strings in Resources */,
-				029493702353CC0700989769 /* Localizable.strings in Resources */,
-				0294936F2353CC0700989769 /* Glossary.plist in Resources */,
-				029493712353CC0700989769 /* EditableFields.strings in Resources */,
-				0294936D2353CC0700989769 /* Glossary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,46 +530,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		029493622353CC0600989769 /* Glossary.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				029493632353CC0600989769 /* en */,
-			);
-			name = Glossary.plist;
-			sourceTree = "<group>";
-		};
-		029493642353CC0600989769 /* ManifestPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				029493652353CC0600989769 /* en */,
-			);
-			name = ManifestPlist.strings;
-			sourceTree = "<group>";
-		};
-		029493672353CC0700989769 /* Glossary.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				029493682353CC0700989769 /* fr */,
-			);
-			name = Glossary.plist;
-			sourceTree = "<group>";
-		};
-		029493692353CC0700989769 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0294936A2353CC0700989769 /* fr */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		0294936B2353CC0700989769 /* EditableFields.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0294936C2353CC0700989769 /* fr */,
-			);
-			name = EditableFields.strings;
-			sourceTree = "<group>";
-		};
 		5EA2E3C82056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -649,6 +573,7 @@
 			baseConfigurationReference = 5E0E37522065981C008FA4BE /* BuildSettings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -671,6 +596,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -681,6 +607,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -709,6 +636,7 @@
 			baseConfigurationReference = 5E0E37522065981C008FA4BE /* BuildSettings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -731,6 +659,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -741,6 +670,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
