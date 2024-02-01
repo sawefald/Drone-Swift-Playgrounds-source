@@ -652,58 +652,56 @@ class DroneProtocol {
 /// Extension to create data of a commands and write zero terminated string
 extension Data {
     init(forCommand cmd:(prj: UInt8, cls: UInt8, id: UInt8)) {
-        self.init(bytes:[4, 0, cmd.prj, cmd.cls, cmd.id, 0])
+        self.init(_:[4, 0, cmd.prj, cmd.cls, cmd.id, 0])
     }
 
     init(ackOf data: Data, withSeqNr seqNr: UInt8) {
-        self.init(bytes:[1, seqNr, data[1]])
+        self.init(_:[1, seqNr, data[1]])
     }
 
     mutating func append(cmdString string: String) {
-        self.append(Data(bytes:Array(string.utf8)))
-        self.append(Data(bytes: [UInt8(0)]))
+        self.append(Data(_:Array(string.utf8)))
+        self.append(Data(_: [UInt8(0)]))
     }
 
     mutating func append(data: UInt8) {
-        self.append(Data(bytes: UnsafePointer<UInt8>([data]), count: MemoryLayout<UInt8>.size))
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
+        }
     }
 
     mutating func append(data: Int8) {
-        UnsafePointer([data]).withMemoryRebound(to: UInt8.self, capacity: MemoryLayout<Int8>.size) {
-            self.append($0, count: MemoryLayout<Int8>.size)
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
         }
     }
 
     mutating func append(data: Int16) {
-        UnsafePointer([data]).withMemoryRebound(to: UInt8.self, capacity: MemoryLayout<Int16>.size) {
-            self.append($0, count: MemoryLayout<Int16>.size)
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
         }
     }
 
     mutating func append(data: UInt32) {
-        UnsafePointer([data]).withMemoryRebound(to: UInt8.self, capacity: MemoryLayout<UInt32>.size) {
-            self.append($0, count: MemoryLayout<UInt32>.size)
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
         }
     }
 
     mutating func append(data: Float) {
-        UnsafePointer([data]).withMemoryRebound(to: UInt8.self, capacity: MemoryLayout<Float>.size) {
-            self.append($0, count: MemoryLayout<Float>.size)
+        Swift.withUnsafeBytes(of: data) {
+            self.append(contentsOf: $0)
         }
     }
 
     func readFloat(at index: Index) -> Float {
-        return self.subdata(
-            in: index..<index+MemoryLayout<Float>.size).withUnsafeBytes { (values: UnsafePointer<Float>) -> Float in
-                return values.pointee
-        }
+        return self.subdata(in: index..<index+MemoryLayout<Float>.size).withUnsafeBytes {$0.load(as: Float.self)}
     }
 
     func readString(at index: Index) -> String {
-        return self.subdata(
-            in: index..<self.count).withUnsafeBytes { (values: UnsafePointer<UInt8>) -> String in
-                return String(cString: values)
-        }
+        let y = self.subdata(in: index..<self.count)
+        guard let str = String(data: y, encoding: .utf8) else { return "" }
+        return str
     }
 }
 

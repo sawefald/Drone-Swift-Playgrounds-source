@@ -283,6 +283,8 @@ extension DroneViewControllerBase: PlaygroundBluetoothConnectionViewDelegate {
             return NSLocalizedString("Select a Drone", comment: "bt connect title")
         case .connectedPeripheralFirmwareOutOfDate:
             return NSLocalizedString("Connect to a Different Drone", comment: "bt connect title")
+        default:
+            return NSLocalizedString("Failed", comment: "bt invalid connect state")
         }
     }
 
